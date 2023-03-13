@@ -36,14 +36,14 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    flavorDimensions += "environment"
+    flavorDimensions += "version"
     productFlavors {
         create("dev") {
-            dimension = "environment"
+            dimension = "version"
             buildConfigField("String", "SERVER_URL", "\"http://dev.yourserver.com\"")
         }
         create("prod") {
-            dimension = "environment"
+            dimension = "version"
             buildConfigField("String", "SERVER_URL", "\"http://prod.yourserver.com\"")
         }
     }

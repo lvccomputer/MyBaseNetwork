@@ -72,6 +72,9 @@ android {
 }
 
 dependencies {
+    implementation(project(":common"))
+    implementation(project(":network"))
+    implementation(project(":core-db"))
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -123,7 +126,6 @@ dependencies {
     //dimen
     implementation("com.intuit.sdp:sdp-android:1.1.0")
 
-    implementation("androidx.browser:browser:1.5.0")
     implementation("com.google.android.flexbox:flexbox:3.0.0")
     api("io.coil-kt:coil:1.2.1")
     api("io.coil-kt:coil-svg:1.2.1") {
