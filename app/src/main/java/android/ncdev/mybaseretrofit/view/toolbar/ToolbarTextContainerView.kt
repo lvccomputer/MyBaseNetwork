@@ -1,8 +1,8 @@
-package android.ncdev.basektornetwork.view.toolbar
+package android.ncdev.mybaseretrofit.view.toolbar
 
 import android.content.Context
-import android.ncdev.basektornetwork.R
-import android.ncdev.basektornetwork.utils.getColorRes
+import android.ncdev.common.utils.getColorRes
+import android.ncdev.mybaseretrofit.R
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View

@@ -1,9 +1,14 @@
 package android.ncdev.mybaseretrofit.core.base
 
-import android.ncdev.basektornetwork.core.base.BaseViewModel
-import android.ncdev.basektornetwork.core.toolbar.ToolbarConfiguration
-import android.ncdev.basektornetwork.view.toolbar.SlidingTopErrorView
-import android.ncdev.basektornetwork.view.toolbar.ToolbarView
+import android.ncdev.mybaseretrofit.core.toolbar.ToolbarConfiguration
+import android.ncdev.mybaseretrofit.view.toolbar.SlidingTopErrorView
+import android.ncdev.mybaseretrofit.view.toolbar.ToolbarView
+import android.ncdev.common.coroutines.Event
+import android.ncdev.common.coroutines.EventObserver
+import android.ncdev.common.coroutines.Resource
+import android.ncdev.common.utils.hideKeyboard
+import android.ncdev.common.utils.navigateSafe
+import android.ncdev.common.utils.showToast
 import android.ncdev.mybaseretrofit.R
 import android.os.Bundle
 import android.view.View
@@ -43,6 +48,7 @@ abstract class BaseFragment(@LayoutRes private val layoutResId: Int) : Fragment(
 
     abstract fun initView()
     abstract fun observeViewModels()
+
     open fun observeError(viewModel: BaseViewModel){
         viewModel.errorLiveData.observeEvent {
             it.showToast(requireContext())
@@ -64,9 +70,9 @@ abstract class BaseFragment(@LayoutRes private val layoutResId: Int) : Fragment(
         findNavController().navigateUp()
     }
 
-    fun showLoading() = (requireActivity() as? BaseActivity)?.showLoading()
+    fun showLoading() = (requireActivity() as? BaseActivity<*>)?.showLoading()
 
-    fun hideLoading() = (requireActivity() as? BaseActivity)?.hideLoading()
+    fun hideLoading() = (requireActivity() as? BaseActivity<*>)?.hideLoading()
 
     private val slidingTopErrorView: SlidingTopErrorView? get() = requireActivity().findViewById(R.id.slidingTopErrorView)
 

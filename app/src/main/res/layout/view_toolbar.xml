@@ -31,7 +31,7 @@
         app:layout_constraintStart_toEndOf="@id/btnBack"
         tools:text="@tools:sample/lorem[1]" />
 
-    <android.ncdev.basektornetwork.view.toolbar.ToolbarButtonContainerView
+    <android.ncdev.mybaseretrofit.view.toolbar.ToolbarButtonContainerView
         android:id="@+id/buttonContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <android.ncdev.basektornetwork.view.toolbar.ToolbarTextContainerView
+    <android.ncdev.mybaseretrofit.view.toolbar.ToolbarTextContainerView
         android:id="@+id/textContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

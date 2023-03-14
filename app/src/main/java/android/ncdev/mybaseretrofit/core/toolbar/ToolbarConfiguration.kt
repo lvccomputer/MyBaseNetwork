@@ -1,4 +1,4 @@
-package android.ncdev.basektornetwork.core.toolbar
+package android.ncdev.mybaseretrofit.core.toolbar
 
 import androidx.annotation.ColorRes
 import androidx.annotation.StringRes

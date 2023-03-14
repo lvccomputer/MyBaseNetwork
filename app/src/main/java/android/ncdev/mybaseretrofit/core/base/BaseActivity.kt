@@ -2,16 +2,27 @@ package android.ncdev.mybaseretrofit.core.base
 
 import android.content.Context
 import android.graphics.Rect
-import android.ncdev.basektornetwork.core.base.LoadingDialogFragment
+import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewbinding.ViewBinding
 
-open class BaseActivity : AppCompatActivity() {
+abstract class BaseActivity<V : ViewBinding> : AppCompatActivity() {
+
+    abstract val binding: V
+
     private var loadingDialog: LoadingDialogFragment? = null
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(binding.root)
+        initView(savedInstanceState)
+    }
+
+    abstract fun initView(bundle: Bundle?)
     fun showLoading(isCancelable: Boolean = false) {
         hideLoading()
         loadingDialog = LoadingDialogFragment.show(supportFragmentManager).apply {

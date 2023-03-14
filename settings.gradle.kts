@@ -15,3 +15,5 @@ dependencyResolutionManagement {
 rootProject.name = "MyBaseRetrofit"
 include (":app")
 include(":network")
+include (":common")
+include (":core-db")

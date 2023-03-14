@@ -1,10 +1,10 @@
 
-package android.ncdev.basektornetwork.view.toolbar
+package android.ncdev.mybaseretrofit.view.toolbar
 
 import android.animation.Animator
 import android.content.Context
-import android.ncdev.basektornetwork.databinding.CustomSlidingTopErrorBinding
 import android.ncdev.common.utils.viewbinding.viewBinding
+import android.ncdev.mybaseretrofit.databinding.CustomSlidingTopErrorBinding
 import android.os.Handler
 import android.os.Looper
 import android.util.AttributeSet

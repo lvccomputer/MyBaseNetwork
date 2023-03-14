@@ -1,12 +1,12 @@
-package android.ncdev.basektornetwork.view.toolbar
+package android.ncdev.mybaseretrofit.view.toolbar
 
 import android.content.Context
 import android.graphics.PorterDuff
-import android.ncdev.basektornetwork.R
-import android.ncdev.basektornetwork.core.toolbar.ToolbarConfiguration
-import android.ncdev.basektornetwork.databinding.ViewToolbarBinding
-import android.ncdev.basektornetwork.utils.getColorRes
+import android.ncdev.common.utils.getColorRes
 import android.ncdev.common.utils.viewbinding.viewBinding
+import android.ncdev.mybaseretrofit.R
+import android.ncdev.mybaseretrofit.core.toolbar.ToolbarConfiguration
+import android.ncdev.mybaseretrofit.databinding.ViewToolbarBinding
 import android.util.AttributeSet
 import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes

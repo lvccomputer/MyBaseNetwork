@@ -1,8 +1,8 @@
-package android.ncdev.basektornetwork.core.base
+package android.ncdev.mybaseretrofit.core.base
 
-import android.ncdev.basektornetwork.R
-import android.ncdev.basektornetwork.core.dialog.FullScreenDialog
 import android.ncdev.common.utils.showWithStateCheck
+import android.ncdev.mybaseretrofit.R
+import android.ncdev.mybaseretrofit.core.dialog.FullScreenDialog
 import androidx.fragment.app.FragmentManager
 
 class LoadingDialogFragment : FullScreenDialog(R.layout.dialog_loading) {

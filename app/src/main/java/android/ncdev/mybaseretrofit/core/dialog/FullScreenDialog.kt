@@ -1,8 +1,8 @@
-package android.ncdev.basektornetwork.core.dialog
+package android.ncdev.mybaseretrofit.core.dialog
 
 import android.app.Dialog
 import android.graphics.drawable.ColorDrawable
-import android.ncdev.basektornetwork.R
+import android.ncdev.mybaseretrofit.R
 import android.ncdev.mybaseretrofit.core.base.BaseActivity
 import android.os.Bundle
 import android.view.ViewGroup
@@ -21,8 +21,8 @@ abstract class FullScreenDialog(@LayoutRes contentLayoutId:Int):DialogFragment(c
         window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
         window.setBackgroundDrawable(ColorDrawable(requireActivity().getColor(R.color.primaryBackground)))
     }
-    fun showLoading() = (requireActivity() as? BaseActivity)?.showLoading()
+    fun showLoading() = (requireActivity() as? BaseActivity<*>)?.showLoading()
 
-    fun hideLoading() = (requireActivity() as? BaseActivity)?.hideLoading()
+    fun hideLoading() = (requireActivity() as? BaseActivity<*>)?.hideLoading()
 
 }

@@ -1,8 +1,8 @@
-package android.ncdev.basektornetwork.core.base
+package android.ncdev.mybaseretrofit.core.base
 
-import android.ncdev.basektornetwork.R
-import android.ncdev.basektornetwork.getAppContext
 import android.ncdev.common.coroutines.Event
+import android.ncdev.mybaseretrofit.R
+import android.ncdev.mybaseretrofit.getAppContext
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

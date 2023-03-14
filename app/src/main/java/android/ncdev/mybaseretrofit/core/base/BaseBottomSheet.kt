@@ -1,5 +1,8 @@
 package android.ncdev.mybaseretrofit.core.base
 
+import android.ncdev.common.coroutines.Event
+import android.ncdev.common.coroutines.EventObserver
+import android.ncdev.mybaseretrofit.R
 import android.os.Bundle
 import android.view.ContextThemeWrapper
 import android.view.LayoutInflater
@@ -68,8 +71,8 @@ abstract class BaseBottomSheet(
     }
 
     fun navBack() = findNavController().navigateUp()
-    fun showLoading() = (requireActivity() as? BaseActivity)?.showLoading()
-    fun hideLoading() = (requireActivity() as? BaseActivity)?.hideLoading()
+    fun showLoading() = (requireActivity() as? BaseActivity<*>)?.showLoading()
+    fun hideLoading() = (requireActivity() as? BaseActivity<*>)?.hideLoading()
 
     fun <V> LiveData<Event<V>>.observeEvent(scope: LifecycleOwner, observer: (V) -> Unit) {
         observe(scope, EventObserver(observer::invoke))
